@@ -7,7 +7,6 @@
 
 body {
     background-color: #f0f2f5;
-    color: #1c1e21;
 }
 
 main {
@@ -136,17 +135,18 @@ footer {
     padding-top: 15px;
 }
 
-.footer-contents {
+.footer-items {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.footer-contents button {
+.footer-items button {
     width: 25px;
+    font-weight: 600;
 }
 
-.footer-contents ol {
+.footer-items ol {
     display: flex;
     flex-direction: row;
     align-items: center;
