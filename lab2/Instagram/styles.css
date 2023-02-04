@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:  #fafafa;
+    font-family: Helvetica, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .wrapper-phone {
+    position: relative;
+}
+
+.wrapper .wrapper-phone .wrapper-phone-screen {
+    position: absolute;
+    left: 150px;
+    top: 100px;
+}
+
+.wrapper .wrapper-form .wrapper-form-login {
+    width: 350px;
+    background-color: white;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    padding: 20px 40px;
+    margin: 5px 0;
+}
+
+.wrapper .wrapper-form .wrapper-form-login #logo {
+    width: 150px;
+}
+
+.wrapper .wrapper-form .wrapper-form-login form {
+    display: flex;
+    flex-direction: column;
+}
