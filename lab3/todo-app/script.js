@@ -29,7 +29,7 @@ const renderTasks = () => {
     const taskItem = document.createElement("li");
     taskItem.classList.add("task-item");
     taskItem.innerHTML =
-      `<button class="mark-done-btn">✔️</button>
+      `<input type="checkbox" class="mark-done-btn" />
       <div class="item ${task.done ? "done" : ""}">${task.name}</div>` +
       `<div class="delete-btn" onclick="deleteTask(${index})"><i class="fa-solid fa-trash"></i></div>`;
     taskItem.querySelector(".mark-done-btn").addEventListener("click", () => {

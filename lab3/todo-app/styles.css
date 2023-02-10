@@ -72,7 +72,6 @@ main .wrapper .wrapper-items ul li button {
     float: right;
     border: none;
     background-color: white;
-    padding: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -81,6 +80,10 @@ main .wrapper .wrapper-items ul li button {
 
 main .wrapper .wrapper-items ul li .item {
     width: 95%;
+}
+
+main .wrapper .wrapper-items ul li input {
+    margin-right: 15px;
 }
 
 main .wrapper .wrapper-items ul li i {
