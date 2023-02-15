@@ -3,7 +3,7 @@ const addTaskBtn = document.querySelector("#add-todo");
 const taskList = document.querySelector("#list-todo");
 
 let tasks = [
-  { name: "Buy Milk", done: false },
+  { name: "Buy Milk", done: true },
   { name: "Coding", done: false },
   { name: "Wash dish", done: false },
 ];
@@ -29,7 +29,7 @@ const renderTasks = () => {
     const taskItem = document.createElement("li");
     taskItem.classList.add("task-item");
     taskItem.innerHTML =
-      `<input type="checkbox" class="mark-done-btn" />
+      `<input type="checkbox" class="mark-done-btn" ${task.done ? "checked" : ""} />
       <div class="item ${task.done ? "done" : ""}">${task.name}</div>` +
       `<div class="delete-btn" onclick="deleteTask(${index})"><i class="fa-solid fa-trash"></i></div>`;
     taskItem.querySelector(".mark-done-btn").addEventListener("click", () => {
