@@ -1,6 +1,8 @@
 /* Global Styles */
 
 * {
+  padding: 0;
+  margin: 0;
   font-family: 'Roboto', Arial, sans-serif;
   color: #616161;
   box-sizing: border-box;

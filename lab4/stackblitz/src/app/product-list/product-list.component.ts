@@ -10,13 +10,17 @@ import { products } from '../products';
 export class ProductListComponent {
   products = [...products];
 
-  share(id: number) {
-    document.location.href = `https://t.me/c/1741134080/${id}`;
+  share(link: string) {
+    document.location.href = link;
   }
 
   onNotify() {
     alert("notify");
   }
+
+  formatedPrice(price: number): string {
+    return price.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
+  } 
 }
 
 
