@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-product-item',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-item.component.css']
 })
 export class ProductItemComponent {
+  @Input() product: any
 
+  share(link: string) {
+    document.location.href = link;
+  }
+
+  onNotify() {
+    alert("notify");
+  }
+
+  formatedPrice(price: number): string {
+    return price.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
+  }
 }

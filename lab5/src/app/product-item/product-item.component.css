@@ -1,0 +1,27 @@
+.wrapper-item {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 80px;
+    padding-top: 10px;
+}
+
+.wrapper-item-right {
+    padding-left: 20px;
+}
+
+.wrapper-item-right p {
+    padding-top: 10px;
+}
+
+img {
+    width: auto;
+    height: 150px;
+}
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

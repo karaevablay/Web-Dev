@@ -4,10 +4,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightskyblue;
+    background-color: #3070cf;
+    border-bottom: 1px solid lightgray;
 }
 
 header p {
     font-size: 32px;
     font-weight: 600;
+    color: white;
 }

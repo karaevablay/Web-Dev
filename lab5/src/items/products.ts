@@ -1,3 +1,5 @@
+import { Category } from "./categories";
+
 export interface Product {
     id: number;
     name: string;
@@ -7,9 +9,10 @@ export interface Product {
     url: string;
     imgURL: string;
     link: string;
+    category: Category;
   };
   
-  export const products = [
+  export const products: Product[] = [
     {
       id: 1,
       name: "Apple iPhone 11",
@@ -18,7 +21,8 @@ export interface Product {
       rating: 5,
       url: "https://kaspi.kz/shop/p/apple-iphone-11-128gb-slim-box-chernyi-100692388/?c=750000000#!/item",
       imgURL: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h0a/h2e/31489167622174/apple-iphone-11-128gb-slim-box-cernyj-100692388-1-Container.jpg",
-      link: "https://t.me/angularwebdev2023/2"
+      link: "https://t.me/angularwebdev2023/2",
+      category: { name: "Телефон" }
     },
     {
       id: 2,
@@ -28,7 +32,8 @@ export interface Product {
       rating: 5,
       url: "https://kaspi.kz/shop/p/apple-watch-series-8-45-mm-aluminum-chernyi-106362847/?c=750000000#!/item",
       imgURL: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h0b/h04/63158967959582/apple-watch-series-8-41-mm-cernyj-106362847-1.jpg",
-      link: "https://t.me/angularwebdev2023/3"
+      link: "https://t.me/angularwebdev2023/3",
+      category: { name: "Часы" }
     },
     {
       id: 3,
@@ -38,7 +43,8 @@ export interface Product {
       rating: 5,
       url: "https://kaspi.kz/shop/p/samsung-galaxy-s22-8-gb-128-gb-chernyi-103662719/?c=750000000#!/item",
       imgURL: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h21/h7a/62349965197342/samsung-galaxy-s22-8-gb-128-gb-chernyi-103662719-1.jpg",
-      link: "https://t.me/angularwebdev2023/6"
+      link: "https://t.me/angularwebdev2023/6",
+      category: { name: "Телефоны" }
     },
     {
       id: 4,
@@ -48,7 +54,8 @@ export interface Product {
       rating: 5,
       url: "https://kaspi.kz/shop/p/xiaomi-mi-band-7-chernyi-105075100/?c=750000000#!/item",
       imgURL: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h76/h2e/51135083642910/xiaomi-mi-band-7-chernyi-105075100-1.jpg",
-      link: "https://t.me/angularwebdev2023/10"
+      link: "https://t.me/angularwebdev2023/10",
+      category: { name: "Часы" }
     },
     {
       id: 5,
@@ -58,7 +65,8 @@ export interface Product {
       rating: 5,
       url: "https://kaspi.kz/shop/p/apple-iphone-11-128gb-slim-box-chernyi-100692388/?c=750000000#!/item",
       imgURL: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h0a/h2e/31489167622174/apple-iphone-11-128gb-slim-box-cernyj-100692388-1-Container.jpg",
-      link: "https://t.me/angularwebdev2023/8"
+      link: "https://t.me/angularwebdev2023/8",
+      category: { name: "Телефон" }
     },
     {
       id: 6,
@@ -68,7 +76,8 @@ export interface Product {
       rating: 5,
       url: "https://kaspi.kz/shop/p/samsung-galaxy-watch-4-classic-sm-r890nzkacis-46-mm-chernyi-chernyi-102170938/?c=750000000#!/item",
       imgURL: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h31/h9b/62047597559838/samsung-galaxy-watch-4-classic-sm-r890-cernyj-102170938-1-Container.jpg",
-      link: "https://t.me/angularwebdev2023/9"
+      link: "https://t.me/angularwebdev2023/9",
+      category: { name: "Часы" }
     },
     {
       id: 7,
@@ -78,7 +87,8 @@ export interface Product {
       rating: 5,
       url: "https://kaspi.kz/shop/p/amazon-kindle-paperwhite-2021-chernyi-102838488/?c=750000000#!/item",
       imgURL: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h6a/ha1/47093254455326/amazon-kindle-paper-2021-chernyi-102838488-1.jpg",
-      link: "https://t.me/angularwebdev2023/11"
+      link: "https://t.me/angularwebdev2023/11",
+      category: { name: "Книга" }
     },
     {
       id: 8,
@@ -88,7 +98,8 @@ export interface Product {
       rating: 5,
       url: "https://kaspi.kz/shop/p/apple-airpods-max-sinii-101180956/?c=750000000#!/item",
       imgURL: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h84/h0d/46659800498206/apple-airpods-max-sinij-101180956-1-Container.jpg",
-      link: "https://t.me/angularwebdev2023/12"
+      link: "https://t.me/angularwebdev2023/12",
+      category: { name: "Наушники" }
     },
     {
       id: 9,
@@ -98,7 +109,8 @@ export interface Product {
       rating: 5,
       url: "https://kaspi.kz/shop/p/jandeks-stantsija-lait-birjuzovyi-101808994/?c=750000000#!/item",
       imgURL: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h36/h98/49342279876638/yandeks-stantsiya-lait-biryuzovyi-101808994-1.jpg",
-      link: "https://t.me/angularwebdev2023/13"
+      link: "https://t.me/angularwebdev2023/13",
+      category: { name: "Станция" }
     },
     {
       id: 10,
@@ -108,7 +120,8 @@ export interface Product {
       rating: 5,
       url: "https://kaspi.kz/shop/p/kieslect-k11-chernyi-104947291/?c=750000000#!/item",
       imgURL: "https://resources.cdn-kaspi.kz/shop/medias/sys_master/images/images/h5c/h60/51661437468702/xiaomi-kieslect-k11-cernyj-104947291-1.jpg",
-      link: "https://t.me/angularwebdev2023/14"
+      link: "https://t.me/angularwebdev2023/14",
+      category: { name: "Часы" }
     },
   ];
   

@@ -1,0 +1,6 @@
+
+<div class="wrapper">
+    <div class="wrapper-items" *ngFor="let category of categories">
+        <button (click)="handleCategory(category.name)" >{{ category.name }}</button>
+    </div>
+</div>

@@ -1,3 +1,15 @@
-<main>
-    
-</main>
+<div class="wrapper">
+  <div class="wrapper-categories">
+    <div class="wrapper-items" *ngFor="let category of categories">
+      <button (click)="handleCategory(category.name)">
+        {{ category.name }}
+      </button>
+    </div>
+  </div>
+
+  <div class="wrapper-products">
+    <div *ngFor="let product of allItems">
+      <app-product-item [product]="product"></app-product-item>
+    </div>
+  </div>
+</div>
