@@ -1,0 +1,13 @@
+header {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightskyblue;
+}
+
+header p {
+    font-size: 32px;
+    font-weight: 600;
+}
