@@ -8,10 +8,15 @@
       </a>
     </h3>
 
-    <p *ngIf="product.description">{{ product.description }}</p>
-    <p *ngIf="product.rating"><b>Рейтинг:</b> {{ product.rating }}</p>
-    <p *ngIf="product.rating">
-      <b>Цена:</b> {{ formatedPrice(product.price) }} ₸
-    </p>
+    <p>{{ product.description }}</p>
+    <p><b>Рейтинг:</b> {{ product.rating }}</p>
+    <p><b>Цена:</b> {{ formatedPrice(product.price) }} ₸</p>
+    <p><b>Нравится:</b> {{ product.likes }}</p>
+    <div class="buttons">
+      <button (click)="handleLike()">
+        <fa-icon [icon]="heart"></fa-icon>
+      </button>
+      <button (click)="handleDelete()">X</button>
+    </div>
   </div>
 </div>
