@@ -8,9 +8,9 @@ import { Product, products } from 'src/items/products';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  items = products;
-  allItems = this.items;
-  categories = this.handleCategoriesList(this.allItems);
+  currentCategory: string = "Все";
+  allItems: any = products;
+  categories: string[] = this.handleCategoriesList(this.allItems);
 
   public get getAllItems(): any {
     return this.allItems;
@@ -24,12 +24,9 @@ export class ProductListComponent {
     document.location.href = link;
   }
 
-  handleCategory(category: string): void {
-    if (category === "Все") {
-      this.allItems = this.items;
-      return;
-    }
-    this.allItems = this.items.filter((item: { category: Category }) => item.category.name === category);
+  handleCategory(category: string): any {
+    this.currentCategory = category;
+    return this.currentCategory === "Все" ? this.allItems : this.allItems.filter((item: { category: Category }) => item.category.name === category);
   }
 
   handleCategoriesList(items: Product[]): string[] {
@@ -44,10 +41,9 @@ export class ProductListComponent {
   }
 
   handleDelete(product: Product): void {
-    const index = this.items.indexOf(product);
+    const index = this.allItems.indexOf(product);
     if (index !== -1) {
-      this.items.splice(index, 1);
-      this.allItems = this.items;
+      this.allItems.splice(index, 1);
     }
   }
 }
